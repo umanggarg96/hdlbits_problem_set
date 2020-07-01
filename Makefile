@@ -20,6 +20,10 @@ design: main.cpp obj_dir/V$(DESIGN)__ALL.a
 		$(VINC)/verilated_vcd_c.cpp \
 		main.cpp obj_dir/V$(DESIGN)__ALL.a \
 		-o $(DESIGN)
+.PHONY: run
+run:
+	./$(DESIGN) > sim.log
+	
 .PHONY: clean
 clean:
-	rm -rf obj_dir/ $(DESIGN) $(DESIGN)trace.vcd
+	rm -rf obj_dir/ $(DESIGN) $(DESIGN)trace.vcd sim.log
