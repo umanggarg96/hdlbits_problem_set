@@ -1,0 +1,2 @@
+DESIGN=top
+include ../Makefile
