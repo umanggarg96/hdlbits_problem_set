@@ -1,4 +1,4 @@
-module thruwire4 ( 
+module top ( 
   input wire a,b,c,
   output wire w,x,y,z
 );

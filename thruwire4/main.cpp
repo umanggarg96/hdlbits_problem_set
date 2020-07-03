@@ -1,9 +1,9 @@
-#include "Vthruwire4.h"
+#include "Vtop.h"
 #include "verilated.h"
 #include <iostream>
 #include <cstdio>
 
-void check(Vthruwire4 *tb, bool w, bool x, bool y, bool z) {
+void check(Vtop *tb, bool w, bool x, bool y, bool z) {
     bool pass = true;
     if(tb-> w != w) { std::cout << "Error: w mismatch" << std::endl ; pass = false; }
     if(tb-> x != x) { std::cout << "Error: x mismatch" << std::endl ; pass = false; }
@@ -16,7 +16,7 @@ int main(int argc, char ** argv) {
     
     Verilated::commandArgs(argc, argv);
 
-    Vthruwire4 *tb = new Vthruwire4;
+    Vtop *tb = new Vtop;
 
     check(tb, false, false, false, false);
 

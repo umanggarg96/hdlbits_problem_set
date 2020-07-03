@@ -1,11 +1,11 @@
-#include "Vlogic1.h"
+#include "Vtop.h"
 #include "verilated.h"
 #include <iostream>
 
 int main(int argc, char ** argv) {
     Verilated::commandArgs(argc, argv);
 
-    Vlogic1 *tb = new Vlogic1;
+    Vtop *tb = new Vtop;
 
     for(int i = 0 ; i < 10; ++i) {
 

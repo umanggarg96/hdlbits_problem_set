@@ -1,2 +1,0 @@
-DESIGN=inverter
-include ../Makefile

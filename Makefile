@@ -3,7 +3,7 @@ all: design run
 
 VERILATOR=verilator
 VERILATOR_ROOT ?= $(shell bash -c 'verilator -V|grep VERILATOR_ROOT | head -1 | sed -e "s/^.*=\s*//"')
-DESIGN ?= dut
+DESIGN ?= top
 VERILATOR_DEBUB=
 
 VINC := $(VERILATOR_ROOT)/include
@@ -23,7 +23,13 @@ design: main.cpp obj_dir/V$(DESIGN)__ALL.a
 .PHONY: run
 run:
 	./$(DESIGN) > sim.log
+
+.PHONY: check
+check:
+	echo ""
+	cat sim.log
+	echo ""
 	
 .PHONY: clean
 clean:
-	rm -rf obj_dir/ $(DESIGN) $(DESIGN)trace.vcd sim.log
+	rm -rf obj_dir/ $(DESIGN) $(DESIGN)trace.vcd sim.log validate.log

@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+for exer in $(find . -maxdepth 1 -mindepth 1 -type d -printf '%f\n'  | grep "^\." -v)
+do
+    echo -e "\e[0mCleaning $exer... "
+    make -s -C $exer -f ../Makefile clean
+done

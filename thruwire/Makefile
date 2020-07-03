@@ -1,2 +1,0 @@
-DESIGN=thruwire
-include ../Makefile

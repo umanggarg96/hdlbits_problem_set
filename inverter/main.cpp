@@ -1,11 +1,11 @@
-#include "Vinverter.h"
+#include "Vtop.h"
 #include "verilated.h"
 #include <iostream>
 
 int main(int argc, char ** argv) {
     Verilated::commandArgs(argc, argv);
 
-    Vinverter *tb = new Vinverter;
+    Vtop *tb = new Vtop;
 
     if( ! ( tb -> out == 0 ) )
         std::cout << "Expected out to be 0" << std::endl;

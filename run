@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+for exer in $(find . -maxdepth 1 -mindepth 1 -type d -printf '%f\n'  | grep "^\." -v)
+do
+    echo -ne "\e[0mRunning $exer... "
+    make -s -C $exer -f ../Makefile
+    if grep -qia error $exer/sim.log
+    then
+        echo -e "\e[31mFAILED"
+    else
+        echo -e "\e[92mPASSED"
+    fi
+done

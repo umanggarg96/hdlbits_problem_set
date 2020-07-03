@@ -1,11 +1,11 @@
-#include "Vthruwire.h"
+#include "Vtop.h"
 #include "verilated.h"
 #include <iostream>
 
 int main(int argc, char ** argv) {
     Verilated::commandArgs(argc, argv);
 
-    Vthruwire *tb = new Vthruwire;
+    Vtop *tb = new Vtop;
 
     if( ! ( tb -> out == 0 ) )
         std::cout << "Expected out to be 0" << std::endl;
