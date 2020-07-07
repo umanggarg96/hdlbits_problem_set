@@ -24,12 +24,6 @@ design: main.cpp obj_dir/V$(DESIGN)__ALL.a
 run:
 	./$(DESIGN) > sim.log
 
-.PHONY: check
-check:
-	echo ""
-	cat sim.log
-	echo ""
-	
 .PHONY: clean
 clean:
-	rm -rf obj_dir/ $(DESIGN) $(DESIGN)trace.vcd sim.log validate.log
+	rm -rf obj_dir/ $(DESIGN) $(DESIGN)trace.vcd sim.log
