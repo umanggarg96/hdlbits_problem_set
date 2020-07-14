@@ -1,4 +1,4 @@
-#HDLbits Problem set solutions
+# HDLbits Problem set solutions
 
 This repo intends to contain contains solutions for all the problems presented on [hdlbits site](http://hdlbits.01xz.net/wiki/Main_Page) along with local test written in C++
 and run using Verilator.
